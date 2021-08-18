@@ -7,10 +7,11 @@ import {
   establishPayer,
   checkProgram,
   sayHello,
-  reportGreetings,
-} from './hello_world';
+  reportGreetings
+} from "./hello_world";
 
 async function main() {
+  console.log("Hello World from Solana!");
   console.log("Let's say hello to a Solana account...");
 
   // Establish connection to the cluster
@@ -28,13 +29,13 @@ async function main() {
   // Find out how many times that account has been greeted
   await reportGreetings();
 
-  console.log('Success');
+  console.log("Success: Greeting updated");
 }
 
 main().then(
   () => process.exit(),
-  err => {
+  (err) => {
     console.error(err);
     process.exit(-1);
-  },
+  }
 );
